@@ -1,4 +1,4 @@
-package io.nerd.customer;
+package io.nerd.fraud.customer;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

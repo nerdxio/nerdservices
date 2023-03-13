@@ -1,9 +1,12 @@
-package io.nerd.customer;
+package io.nerd.fraud.customer;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-public record CustomerService(CustomerRepository customerRepository) {
+@RequiredArgsConstructor
+public class CustomerService {
+    private final CustomerRepository customerRepository;
     public Customer registerCustomer(CustomerRegistrationRequest customerRequest) {
         var customer =Customer.builder()
                 .firstName(customerRequest.firstName())
