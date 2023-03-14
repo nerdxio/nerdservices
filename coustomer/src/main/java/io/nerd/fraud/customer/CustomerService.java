@@ -22,7 +22,7 @@ public class CustomerService {
         // todo check if email valid
         // todo check if email not taken
         var fraudCheckResponse = restTemplate.getForObject(
-                "http://localhost:8888/api/v1/fraud-check/{customerID}",
+                "http://FRAUD/api/v1/fraud-check/{customerID}",
                 FraudCheckResponse.class,
                 customer.getId()
         );
